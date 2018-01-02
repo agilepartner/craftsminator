@@ -1,0 +1,121 @@
+# Java Ignores
+/java/trip-service-kata/target
+/java/trip-service-kata/.classpath
+/java/trip-service-kata/.project
+/java/trip-service-kata/.settings
+/java/trip-service-kata/tomcat.*
+/java/trip-service-kata/.idea
+/java/trip-service-kata/*.iml
+
+# C# Ignores
+_ReSharper.*/
+[Bb]in
+[Oo]bj
+*.suo
+*.user
+_NCrunch_*/
+**/.vs/*
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+*_i.c
+*_p.c
+*_i.h
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+# except build/, which is used as an MSBuild target.
+!**/packages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/packages/repositories.config
+# NuGet v3's project.json files produces more ignoreable files
+*.nuget.props
+*.nuget.targets
+
+# Python Ignores
+*.pyc
+
+#php netbeans
+php/nbproject/
+
+# JavaScript Ignores
+/javascript/node_modules
+
+# Ignore Vim undo history
+*.un~
+
+# sbt specific
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+
+# Scala-IDE specific
+.scala_dependencies
+
+# IntelliJ IDEA
+.idea/
+.idea_modules
+out/
+*.iml
+**/.idea
+
+#Xcode / Objective-c Ignores
+
+.DS_Store
+
+## Build generated
+build/
+DerivedData
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+
+## Other
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+/c#/TripServiceKata/.vs/TripServiceKata/v15/sqlite3
