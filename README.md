@@ -1,1 +1,3 @@
-# craftsminator
+# Craftsminator
+
+![craftsminator](images/craftsminator.png)
