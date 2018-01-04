@@ -15,13 +15,10 @@ namespace Craftsminator.Trips
                 throw new UserNotLoggedInException();
             }
 
-            bool areFriends = user.Friends.Any(u => u.Id == LoggedUser.Id);
-
-            if (!areFriends)
+            if(!user.Friends.Any(u => u.Id == LoggedUser.Id))
             {
-                return new Trip[0];
+                throw new UserNotFriendsException();
             }
-
             return await TripRepository.GetTripsByUser(user);
         }
 

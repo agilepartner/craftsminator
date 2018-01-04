@@ -1,6 +1,6 @@
 ﻿namespace Craftsminator.Exceptions
 {
-    public class UserNotLoggedInException : System.Exception
+    internal class UserNotLoggedInException : System.Exception
     {
         
     }
