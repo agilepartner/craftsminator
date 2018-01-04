@@ -5,15 +5,18 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace Craftsminator.Tests
 {
     public class TripServiceTest
     {
-        private Guid connectedUser;
+        private readonly Guid connectedUser;
+        private readonly ITestOutputHelper output;
 
-        public TripServiceTest()
+        public TripServiceTest(ITestOutputHelper output)
         {
+            this.output = output;
             connectedUser = UsersForTests.Griffin;
             TripService.Connect(connectedUser);
         }
@@ -26,12 +29,16 @@ namespace Craftsminator.Tests
             userDal.TryGetUser(UsersForTests.Smith, out aFriendOfTheConnectedUser);
             var service = new TripService();
 
-            var trips = await service.Trip(aFriendOfTheConnectedUser);
+            var trips = await service.GetTripsForUser(aFriendOfTheConnectedUser);
 
             trips.Should().HaveCount(1);
             trips.Single().Destination
                  .Should()
                  .Be("Dubrovnik");
+
+            #region 
+            output.WriteLine("Carte 54");
+            #endregion
         }
     }
 }
