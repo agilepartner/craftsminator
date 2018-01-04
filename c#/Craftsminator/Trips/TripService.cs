@@ -76,7 +76,7 @@ namespace Craftsminator.Trips
                     }
                     finally
                     {
-                        if(exceptionThrown)
+                        if()
                         {
                             list = new Trip[0];
                         }
