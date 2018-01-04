@@ -8,6 +8,8 @@ namespace Craftsminator.Trips
 {
     public sealed class TripService
     {
+        private const short maximumNumberOfTheMinimumTrips = 3;
+
         public async Task<Trip[]> GetTripsForUser(User user)
         {
             if (LoggedUser == null)
@@ -19,7 +21,11 @@ namespace Craftsminator.Trips
             {
                 throw new UserNotFriendsException();
             }
-            return await TripRepository.GetTripsByUser(user);
+
+            Trip[] list = await TripRepository.GetTripsByUser(user);
+
+            // DO NOT TOUCH  !!! Added to save the project on the demand of the PO
+            return list.Count() < maximumNumberOfTheMinimumTrips ? list : new Trip[0];
         }
 
         public static User LoggedUser { get; private set; }
