@@ -118,4 +118,7 @@ xcuserdata
 *.xccheckout
 *.moved-aside
 *.xcuserstate
-/c#/TripServiceKata/.vs/TripServiceKata/v15/sqlite3
+
+# # Node
+node_modules
+
