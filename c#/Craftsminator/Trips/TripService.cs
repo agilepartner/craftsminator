@@ -63,12 +63,8 @@ namespace Craftsminator.Trips
                     try
                     {
                         // Get the trips by passing through the DAL
-                        list = await TripRepository.GetTripsByUser(u);
-
-                        if (list.Count() == 3)
-                        {
-                            list = new Trip[0];
-                        }
+                        var results = await TripRepository.GetTripsByUser(u);
+                        return results.ToList();
                     }
                     catch
                     {

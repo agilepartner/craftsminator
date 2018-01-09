@@ -13,7 +13,7 @@ describe('Get trips', () => {
     let userRepository = new UserRepository();
     let aFriendOfTheConnectedUser = await userRepository.getUser(UsersForTests.Smith);
 
-    let result = await service.getTripsForUser(aFriendOfTheConnectedUser);
+    let result = await service.trip(aFriendOfTheConnectedUser);
     assert.isNotEmpty(result);
     assert.equal(result.Single().destination, 'Dubrovnik');
   });
