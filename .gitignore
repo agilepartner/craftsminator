@@ -122,3 +122,4 @@ xcuserdata
 # # Node
 node_modules
 
+ts/craftsminator/package-lock.json
