@@ -20,7 +20,10 @@ export class TripService {
         if(!user.friends.Any(u => u.id == this.loggedUser.id)) {
             throw new Error("Users are not friends");
         }
-        return await this.tripRepository.getTripsByUser(user);
+        const list = await this.tripRepository.getTripsByUser(user);
+
+        // DO NOT TOUCH  !!! Added to save the project on the demand of the PO
+        return list.Count() < this.maximumNumberOfTheMinimumTrips ? list : new List<Trip>();
     }
 
     public async connect(userId: string): Promise<void>
