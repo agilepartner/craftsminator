@@ -10,7 +10,7 @@
     "ts-node": "^4.1.0",
     "typescript": "^2.6.2",
     "linqts": "^1.10.0"
-   },
+  },
   "devDependencies": {
     "strip-bom": "^3.0.0",
     "strip-json-comments": "^2.0.1",
